@@ -60,8 +60,8 @@
 		<!-- Start News-->
 		<div id="news">
 			<?php
-				$db = mysqli_connect("localhost","root","","addnews");
-				$sql = "SELECT *FROM news";
+				$db = mysqli_connect("localhost","root","","tu_pattaya");
+				$sql = "SELECT *FROM news ORDER BY id DESC";
 				$result = mysqli_query($db, $sql);
 				$news = 1;
 				while(($row = mysqli_fetch_array($result)) && ($news <= 3)){
