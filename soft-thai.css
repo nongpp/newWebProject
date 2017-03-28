@@ -37,15 +37,20 @@ header{
 
 #bodyData {
 	width: 100%;
-	height: 3000px;
-}
-
-.general {
 	height: 1600px;
 }
 
-.course {
+#general {
+	height: 1600px;
+}
+
+#course {
 	height: 700px;
+	display: none;
+}
+
+#plan {
+	display: none;
 }
 
 #side{
