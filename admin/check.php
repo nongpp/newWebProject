@@ -1,6 +1,6 @@
 <?php
 	require'./dbConnect.php';
-	
+	session_start();
 	$username = $_POST['username'];
 	$password = $_POST['password'];
 	
@@ -9,7 +9,9 @@
 	$row = mysqli_fetch_row($result);
 	
 	if($username == $row[1] && $password == $row[2]){
-		header("location:home.php");
+		$_SESSION['username'] = $_POST['username'];
+      		$_SESSION['password'] = $_POST['password'];
+		header("location:admin_page.php");
 	}
 	else{
 		echo "<script> window.alert('Username or Password incorrect');</script>";

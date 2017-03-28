@@ -1,10 +1,15 @@
 <?php
+	session_start();
+	if($_SESSION['username']==''){
+		echo "<a href=login.php><h1>Please Login</h1></a>";
+		exit();
+	}
 	//if upload button is pressed
 	if(isset($_POST['upload'])){
 		
 		$target = "news/".basename($_FILES['image']['name']);
 		//connect to the database
-		$db = mysqli_connect("localhost","root","","test");
+		$db = mysqli_connect("localhost","root","","tu_pattaya");
 		
 		$image = $_FILES['image']['name'];
 		$topic = $_POST['topic'];
@@ -40,9 +45,9 @@
 		
 		<div id="big-content">
 			<div id="menubar">
-				<a href="home.php"><div class="menubar-inner"><i class="fa fa-bar-chart" style="font-size:24px"></i>View table</div></a>
+				<a href="admin_page.php"><div class="menubar-inner"><i class="fa fa-bar-chart" style="font-size:24px"></i>View table</div></a>
 				<a href="addnews.php"><div class="menubar-inner current"><i class="fa fa-plus-square" style="font-size:24px"></i>Add news</div></a>
-				<a href="login.php"><div class="menubar-inner"><i class="fa fa-sign-out" style="font-size:24px"></i>Log out</div></a>
+				<a href="logout.php"><div class="menubar-inner"><i class="fa fa-sign-out" style="font-size:24px"></i>Log out</div></a>
 			</div>
 			<div id="content">
 				<div id="content-inside">
