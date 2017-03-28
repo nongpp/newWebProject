@@ -16,7 +16,7 @@ a{
 	text-decoration: none;
 }
 
-p{
+p.button{
 	padding-left: 40px;
 }
 
@@ -35,12 +35,25 @@ header{
 	height : 66px;
 }
 
+#bodyData {
+	width: 100%;
+	height: 3000px;
+}
+
+.general {
+	height: 1600px;
+}
+
+.course {
+	height: 700px;
+}
+
 #side{
 	background-color : #111111;
 	border-top: 2px solid #ffcc00;
 	width : 20%;
 	height: 100%;
-	
+	float: left;
 }
 
 #sideButton{
@@ -57,10 +70,51 @@ header{
 }
 .sideButton:hover{
 	background-color: #ffcc00;
+	cursor: pointer;
 }
+
+#data {
+	width: 70%;
+	float: right;
+}
+
+#head-detail {
+	padding-top : 50px;
+	color: black;
+	text-align: center;
+}
+
+#detail {
+	padding-top: 25px;
+	width: 90%;
+	margin: 0 auto;
+	color: black;
+}
+
 #header-inner{
 	max-width : 1200px;
 	margin : 0 auto;
+}
+
+/*--table--*/
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.tableHeader {
+	text-align: center;
 }
 
 #logo{
