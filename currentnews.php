@@ -1,9 +1,18 @@
+<?php
+	$db = mysqli_connect("localhost","root","","tu_pattaya");
+	
+	$idSelect = $_GET['id'];
+	$sql = "select * from news where id=$idSelect";
+	$result = mysqli_query($db,$sql);
+	
+	$row = mysqli_fetch_assoc($result);
+?>
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Welcome to Thammasat University</title>
+		<title>Software Engineering</title>
 		<meta charset="utf-8">
-		<?php echo '<link rel="stylesheet" type="text/css" href="news-eng2.css">' ?>
+		<?php echo '<link rel="stylesheet" type="text/css" href="currentnews.css">'; ?>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
@@ -41,7 +50,7 @@
 								</div>
 							</li>
 							<li><a href = "life-eng.php">Student's Life</a></li>
-							<a href="news-thai.php"><img src="img/thai.png" alt="thai" width="40px" height="20px" class="flag"></a>
+							<a href="life-thai.php"><img src="img/thai.png" alt="thai" width="40px" height="20px" class="flag"></a>
 							
 						</ul>
 					</nav>
@@ -50,30 +59,15 @@
 		</header>
 		<!-- End Header-->
 		
-		<!-- Start News-->
-		<div id="news">
+		<div id="container">
 			<?php
-				$db = mysqli_connect("localhost","root","","tu_pattaya");
-				$sql = "SELECT *FROM news";
-				$result = mysqli_query($db, $sql);
-				while($row = mysqli_fetch_array($result)){
-					echo "<div id='news-each'>";
-						echo "<div id='img'>";
-							echo "<img src = 'admin/news/".$row['image']."' width='350px'>";
-						echo "</div>";
-						echo "<div id='paragraph'>";
-							echo "<div id='inner-paragraph'>";
-								echo "<h3>".$row['topic']."</h3>";
-								echo "<p>".$row['text']."</p>";
-								echo "<a href='currentnews.php?id=".$row['id']."'>read more</a>";
-							echo "</div>";
-						echo "</div>";
-					echo "</div>";
-				}
+				echo "<img src='admin/news/".$row['image']."'>";
+				echo "<h3>".$row['topic']."</h3>";
+				echo "<p>".$row['text']."</p>";
 			?>
 		</div>
 		
-		<!--Start Footer-->
+		<!-- Start Footer-->
 		<footer>
 			<ul class = "social">
 				<li><span>Faculty of Engineering, Thammasat University. ? 2013 All Rights Reserved</span></li>
@@ -83,6 +77,6 @@
 				<li id="x"><a href = "admin/login.php">.</a></li>
 			</ul>
 		</footer>
-		<!-- End Footer-->
+		<!--End Footer-->
 	</body>
 </html>

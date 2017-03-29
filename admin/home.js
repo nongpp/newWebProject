@@ -9,3 +9,7 @@ function showEng(){
 	document.getElementById("thai").style.display = 'none';
 	document.getElementById("english").style.display = 'block';
 }
+function c(){
+	var rows = document.getElementById('tableId').rows.length;;
+	document.getElementById('no').innerHTML = rows;
+}

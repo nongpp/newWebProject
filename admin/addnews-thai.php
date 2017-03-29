@@ -15,7 +15,7 @@
 		$topic = $_POST['topic'];
 		$text = $_POST['text'];
 		
-		$sql = "INSERT INTO news (image, topic, text) VALUES ('$image', '$topic', '$text')";
+		$sql = "INSERT INTO newsth (image, topic, text) VALUES ('$image', '$topic', '$text')";
 		mysqli_query($db, $sql); //stores the submit data into the database table: images
 		
 		//Now let's move the upload image into the folder: images
@@ -60,21 +60,21 @@
 							<a href="addnews-thai.php"><img src="img/thai.png" width="40px" id="flag-inner1"></a>
 							<a href="addnews.php"><img src="img/uk.jpg" width="40px" id="flag-inner2"></a>
 						</div>
-						<form method="post" action="addnews.php" enctype="multipart/form-data">
+						<form method="post" action="addnews-thai.php" enctype="multipart/form-data">
 							<input type="hidden" name="size" value="1000000">
 							<div>
 								<input type="file" name="image">
 							</div>
 							<div>
-								<h3>header</h3>
+								<h3>หัวข้อ</h3>
 								<input type="text" name="topic">
 							</div>
 							<div>
-								<h3>content</h3>
+								<h3>เนื้อหา</h3>
 								<textarea name="text" cols="40" rows="4"></textarea>
 							</div>
 							<div>
-								<input type="submit" name="upload" value="Save">
+								<input type="submit" name="upload" value="บันทึก">
 							</div>
 						</form>
 					</div>

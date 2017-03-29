@@ -1,9 +1,19 @@
+<?php
+	session_start();
+	if($_SESSION['username']==''){
+		header('location:login.php');
+		exit();
+	}else{
+	$db = mysqli_connect("localhost","root","","tu_pattaya");
+	$sql = "SELECT *FROM activityeng ORDER BY id DESC";
+	$result = mysqli_query($db, $sql);}
+?>
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Welcome to Thammasat University</title>
+		<title>History</title>
 		<meta charset="utf-8">
-		<?php echo '<link rel="stylesheet" type="text/css" href="news-eng2.css">' ?>
+		<?php echo '<link rel="stylesheet" type="text/css" href="activity-eng1.css">'; ?>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
@@ -41,7 +51,7 @@
 								</div>
 							</li>
 							<li><a href = "life-eng.php">Student's Life</a></li>
-							<a href="news-thai.php"><img src="img/thai.png" alt="thai" width="40px" height="20px" class="flag"></a>
+							<a href="history-thai.php"><img src="img/thai.png" alt="thai" width="40px" height="20px" class="flag"></a>
 							
 						</ul>
 					</nav>
@@ -50,27 +60,27 @@
 		</header>
 		<!-- End Header-->
 		
-		<!-- Start News-->
-		<div id="news">
-			<?php
-				$db = mysqli_connect("localhost","root","","tu_pattaya");
-				$sql = "SELECT *FROM news";
-				$result = mysqli_query($db, $sql);
-				while($row = mysqli_fetch_array($result)){
-					echo "<div id='news-each'>";
-						echo "<div id='img'>";
-							echo "<img src = 'admin/news/".$row['image']."' width='350px'>";
-						echo "</div>";
-						echo "<div id='paragraph'>";
-							echo "<div id='inner-paragraph'>";
-								echo "<h3>".$row['topic']."</h3>";
-								echo "<p>".$row['text']."</p>";
-								echo "<a href='currentnews.php?id=".$row['id']."'>read more</a>";
-							echo "</div>";
-						echo "</div>";
-					echo "</div>";
-				}
-			?>
+		<div id="container">
+			<h3>Activity</h3>
+			<div id="table">
+				<table>
+					<tr>
+						<th>ID</th>
+						<th>Date(dd/mm/yy)</th>
+						<th>Activity</th>
+						<th>Detail</th>
+					</tr>
+					<?php while($row= mysqli_fetch_row($result)){?>
+					<tr>
+						<td><?php echo $row[0] ?></td>
+						<td><?php echo $row[1] ?></td>
+						<td><?php echo $row[2] ?></td>
+						<td><?php echo $row[3] ?></td>
+					</tr>
+					<?php }?>
+							
+				</table>
+			</div>
 		</div>
 		
 		<!--Start Footer-->
@@ -80,7 +90,6 @@
 				<li><a href = "https://www.facebook.com/ENGR.THAMMASAT" target = "_blank"><i class = "fa fa-facebook"></i></a></li>
 				<li><a href = "https://twitter.com/engr_tu" target = "_blank"><i class = "fa fa-twitter"></i></a></li>
 				<li><a href = "http://www.engr.tu.ac.th/en/rss" target = "_blank"><i class = "fa fa-rss-square"></i></a></li>
-				<li id="x"><a href = "admin/login.php">.</a></li>
 			</ul>
 		</footer>
 		<!-- End Footer-->

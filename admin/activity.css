@@ -2,7 +2,7 @@ body{
 	margin: 0;
 	padding: 0;
 	border: 0;
-	background: #ffffff;
+	background: #eeeeee;
 }
 h2{
 	color: red;
@@ -21,9 +21,9 @@ h4{
 p{
 	font-size: 120%;
 	color: white;
+	font-family: 'Montserrat', sans-serif;
 	margin: 0;
 	padding: 0;
-	font-family: 'Montserrat', sans-serif;
 }
 a{
 	text-decoration: none;
@@ -77,32 +77,25 @@ i{
 	margin-top: 30px;
 	width: 85%;
 	float: right;
-	text-align: center;
 }
-#content-inside{
-	width: 70%;
-	margin: 30px;
-}
-input[type=file]{
-	
-}
-input[type=text]{
-	width: 500px;
-	height: 40px;
+.flag{
+	float: right;
 	margin: 10px;
+	margin-right: 60px;
+	padding: 10px;
 }
-textarea{
-	width: 500px;
-	margin: 10px;
-	height: 200px;
+#flag-inner1{
+	margin-right: 10px;
 }
-input[type=submit]{
-	background: #111111;
-	color: white;
-	border: none;
-	font-family: 'Montserrat', sans-serif;
-	padding: 10px 20px 10px 20px;
+#flag-inner2{
+	margin-right: 10px;
 }
-input[type=submit]:hover{
-	background: orange;
+#flag-inner1:hover{
+	filter: brightness(350%);
+}
+#flag-inner2:hover{
+	filter: brightness(350%);
+}
+#thai{
+	display: none;
 }

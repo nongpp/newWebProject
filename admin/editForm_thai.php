@@ -1,7 +1,7 @@
 <?php
 	$db = mysqli_connect("localhost","root","","tu_pattaya");
 	$idSelect = $_GET['id'];
-	$sql = "select * from news where id=$idSelect";
+	$sql = "select * from newsth where id=$idSelect";
 	$result = mysqli_query($db,$sql);
 	$row = mysqli_fetch_assoc($result);
 ?>
@@ -28,11 +28,11 @@
 				<a href="life.php"><div class="menubar-inner"><i class="fa fa-bar-chart" style="font-size:24px"></i>View life</div></a>
 				<a href="addnews.php"><div class="menubar-inner"><i class="fa fa-plus-square" style="font-size:24px"></i>Add news</div></a>
 				<a href="addactivity.php"><div class="menubar-inner"><i class="fa fa-plus-square" style="font-size:24px"></i>Add activity</div></a>
-				<a href="addlife.php"><div class="menubar-inner"><i class="fa fa-plus-square" style="font-size:24px"></i>Add life</div>
+				<a href="addlife.php"><div class="menubar-inner"><i class="fa fa-plus-square" style="font-size:24px"></i>Add life</div></a>
 				<a href="logout.php"><div class="menubar-inner"><i class="fa fa-sign-out" style="font-size:24px"></i>Log out</div></a>
 			</div>
 			<div id="content">
-				<form method="post" action="editnews.php" enctype="multipart/form-data">
+				<form method="post" action="editnews_thai.php" enctype="multipart/form-data">
 					<input type="hidden" name="size" value="1000000">
 					<input type="hidden" name="id_select" value='<?php echo $row['id']?>'>
 					<div>

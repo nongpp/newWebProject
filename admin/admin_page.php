@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	if($_SESSION['username']==''){
-		echo "<a href=login.php><h1>Please Login</h1></a>";
+		header('location:login.php');
 		exit();
 	}else{
 	$db = mysqli_connect("localhost","root","","tu_pattaya");
@@ -26,11 +26,13 @@
 		<div id="big-content">
 			<div id="menubar">
 				
-				<div class="menubar-inner current"><i class="fa fa-bar-chart" style="font-size:24px"></i>View news</div>
-				<a href="viewactivity.php"><div class="menubar-inner"><i class="fa fa-bar-chart" style="font-size:24px"></i>View activity</div></a>
+				<a href="admin_page.php"><div class="menubar-inner current"><i class="fa fa-bar-chart" style="font-size:24px"></i>View news</div>
+				<a href="activity.php"><div class="menubar-inner"><i class="fa fa-bar-chart" style="font-size:24px"></i>View activity</div></a>
+				<a href="life.php"><div class="menubar-inner"><i class="fa fa-bar-chart" style="font-size:24px"></i>View life</div></a>
 				<a href="addnews.php"><div class="menubar-inner"><i class="fa fa-plus-square" style="font-size:24px"></i>Add news</div></a>
-				<a href="addactivity.php"><div class="menubar-inner"><i class="fa fa-plus-square" style="font-size:24px"></i>Add activity</div></a>
-				<a href="logout.php"><div class="menubar-inner"><i class="fa fa-sign-out" style="font-size:24px"></i>Log out</div></a>
+				<a href="addactivity.php"><div class="menubar-inner"><i class="fa fa-plus-square" style="font-size:24px"></i>Add life</div></a>
+				<a href="addlife.php"><div class="menubar-inner"><i class="fa fa-plus-square" style="font-size:24px"></i>Add staff</div>
+				<a href="logout.php" onclick="return confirm('Are you sure to logout?');"><div class="menubar-inner"><i class="fa fa-sign-out" style="font-size:24px"></i>Log out</div></a>
 			</div>
 			<div id="content">
 				<div class="flag">
@@ -39,7 +41,7 @@
 				</div>
 				<br>
 				<div id="english">
-					<table>
+					<table id="tableId">
 						<tr>
 							<th>ID</th>
 							<th>News</th>
@@ -49,7 +51,7 @@
 						</tr>
 						<?php while($row= mysqli_fetch_row($result)){?>
 						<tr>
-							<td><?php echo $row[0] ?></td>
+							<td><?php echo $row[0] ?></p></td>
 							<td><?php echo $row[2] ?></td>
 							<td><?php echo date("d/m/Y") ?></td>
 							<td><a href="editForm.php?id=<?php echo $row[0]?>">Edit</td>
@@ -63,10 +65,10 @@
 					<table>
 						<tr>
 							<th>ID</th>
-							<th>¢Ë“«</th>
-							<th>«—π∑’Ë («—π/‡¥◊Õπ/ª’)</th>
-							<th>·°È‰¢</th>
-							<th>≈∫</th>
+							<th>‡∏Ç‡πà‡∏≤‡∏ß</th>
+							<th>‡∏ß‡∏±‡∏ô‡∏ó‡∏µ‡πà</th>
+							<th>‡πÅ‡∏Å‡πâ‡πÑ‡∏Ç</th>
+							<th>‡∏•‡∏ö</th>
 						</tr>
 						<?php 
 							$sql1 = "SELECT *FROM newsth ORDER BY id DESC";
@@ -77,8 +79,8 @@
 							<td><?php echo $row[0] ?></td>
 							<td><?php echo $row[2] ?></td>
 							<td><?php echo date("d/m/Y") ?></td>
-							<td><a href="editForm.php?id=<?php echo $row[0]?>">·°È‰¢</td>
-							<td><a href="delete.php?id=<?php echo $row[0]?>">≈∫</a></td>
+							<td><a href="editForm_thai.php?id=<?php echo $row[0]?>">‡πÅ‡∏Å‡πâ‡πÑ‡∏Ç</td>
+							<td><a href="delete_thai.php?id=<?php echo $row[0]?>">‡∏•‡∏ö</a></td>
 						</tr>
 						<?php }?>
 						

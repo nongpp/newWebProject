@@ -7,24 +7,18 @@
 	//if upload button is pressed
 	if(isset($_POST['upload'])){
 		
-		$target = "news/".basename($_FILES['image']['name']);
 		//connect to the database
 		$db = mysqli_connect("localhost","root","","tu_pattaya");
 		
-		$image = $_FILES['image']['name'];
+		$date = $_POST['date'];
 		$topic = $_POST['topic'];
-		$text = $_POST['text'];
+		$detail = $_POST['detail'];
 		
-		$sql = "INSERT INTO news (image, topic, text) VALUES ('$image', '$topic', '$text')";
+		$sql = "INSERT INTO activityeng (date, topic, detail) VALUES ('$date', '$topic','$detail')";
 		mysqli_query($db, $sql); //stores the submit data into the database table: images
 		
 		//Now let's move the upload image into the folder: images
-		if(move_uploaded_file($_FILES['image']['tmp_name'], $target)){
-			$msg = "Image uploaded successfully";
-		}else{
-			$msg = "There was a problem uploading image";
-		}
-
+		
 	}
 ?>
 <!DOCTYPE html>
@@ -32,7 +26,7 @@
 	<head>
 		<title>Add news</title>
 		<meta charset="UTF-8">
-		<link rel="stylesheet" type="text/css" href="addnews1.css">
+		<link rel="stylesheet" type="text/css" href="addactivity1.css">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Londrina+Sketch" rel="stylesheet">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -48,8 +42,8 @@
 				<a href="admin_page.php"><div class="menubar-inner"><i class="fa fa-bar-chart" style="font-size:24px"></i>View news</div></a>
 				<a href="activity.php"><div class="menubar-inner"><i class="fa fa-bar-chart" style="font-size:24px"></i>View activity</div></a>
 				<a href="life.php"><div class="menubar-inner"><i class="fa fa-bar-chart" style="font-size:24px"></i>View life</div></a>
-				<a href="addnews.php"><div class="menubar-inner current"><i class="fa fa-plus-square" style="font-size:24px"></i>Add news</div></a>
-				<a href="addactivity.php"><div class="menubar-inner"><i class="fa fa-plus-square" style="font-size:24px"></i>Add activity</div></a>
+				<a href="addnews.php"><div class="menubar-inner"><i class="fa fa-plus-square" style="font-size:24px"></i>Add news</div></a>
+				<a href="addactivity.php"><div class="menubar-inner current"><i class="fa fa-plus-square" style="font-size:24px"></i>Add activity</div></a>
 				<a href="addlife.php"><div class="menubar-inner"><i class="fa fa-plus-square" style="font-size:24px"></i>Add life</div></a>
 				<a href="logout.php" onclick="return confirm('Are you sure to logout?');"><div class="menubar-inner"><i class="fa fa-sign-out" style="font-size:24px"></i>Log out</div></a>
 			</div>
@@ -57,22 +51,24 @@
 				<div id="content">
 					<div id="content-inside">
 						<div id="flag">
-							<a href="addnews-thai.php"><img src="img/thai.png" width="40px" id="flag-inner1"></a>
-							<a href="addnews.php"><img src="img/uk.jpg" width="40px" id="flag-inner2"></a>
+							<a href="addactivity_thai.php"><img src="img/thai.png" width="40px" id="flag-inner1"></a>
+							<a href="addactivity.php"><img src="img/uk.jpg" width="40px" id="flag-inner2"></a>
 						</div>
-						<form method="post" action="addnews.php" enctype="multipart/form-data">
+						<form method="post" action="addactivity.php" enctype="multipart/form-data">
 							<input type="hidden" name="size" value="1000000">
 							<div>
-								<input type="file" name="image">
+								<h3>date</h3>
+								<input type="text" name="date">
 							</div>
 							<div>
-								<h3>header</h3>
+								<h3>topic</h3>
 								<input type="text" name="topic">
 							</div>
 							<div>
-								<h3>content</h3>
-								<textarea name="text" cols="40" rows="4"></textarea>
+								<h3>detail</h3>
+								<textarea name="detail" cols="40" rows="4"></textarea>
 							</div>
+
 							<div>
 								<input type="submit" name="upload" value="Save">
 							</div>

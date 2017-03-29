@@ -3,7 +3,7 @@
 	<head>
 		<title>History</title>
 		<meta charset="utf-8">
-		<?php echo '<link rel="stylesheet" type="text/css" href="program-eng.css">'; ?>
+		<?php echo '<link rel="stylesheet" type="text/css" href="program-eng1.css">'; ?>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
@@ -18,7 +18,6 @@
 				<div id = "header-inner">
 					<a href = "home-eng.php" id = "logo"></a>
 					<nav>
-						<a href = "#" id = "menu-icon"></a>
 						<ul>
 							<li><a href = "home-eng.php">Home</a></li>
 							<li class="dropdown"><a href = "#" class="droptn">News and Activity</a>
@@ -37,12 +36,12 @@
 							</li>
 							<li class="dropdown"><a href = "program-eng.php" class="droptn current">Program</a>
 								<div class="dropdown-content">
-								  <a href="http://se.engr.tu.ac.th/course.php" target="_blank">Software Engineering</a>
-								  <a href="http://www.tep.engr.tu.ac.th/page_bx.php?cid=33&cname=AUTO-TU&cno=24&cno2=&show=" target="_blank">Automotive Engineering</a>
+								  <a href="soft-eng.php">Software Engineering</a>
+								  <a href="auto-eng.php">Automotive Engineering</a>
 								</div>
 							</li>
 							<li><a href = "life-eng.php">Student's Life</a></li>
-							<a href=""><img src="img/thai.png" alt="thai" width="40px" height="20px" class="flag"></a>
+							<a href="program-thai.php"><img src="img/thai.png" alt="thai" width="40px" height="20px" class="flag"></a>
 							
 						</ul>
 					</nav>
@@ -54,12 +53,12 @@
 		<div id="container">
 			<div id="inside">
 				<div class="display">
-					<img src="img/software.png" width="400px" height="220px" class="image">
-					<h3>Software Engineering</h3>
+					<a href="soft-eng.php"><img src="img/software.png" width="400px" height="220px" class="image"></a>
+					<a href="soft-eng.php"><h3>Software Engineering</h3></a>
 				</div>
 				<div class="display">
-					<img src="img/automotive.jpg" width="400px" height="220px" class="image">
-					<h3>Automotive Engineering</h3>
+					<a href="auto-eng.php"><img src="img/automotive.jpg" width="400px" height="220px" class="image"></a>
+					<a href="auto-eng.php"><h3>Automotive Engineering</h3></a>
 				</div>
 			</div>
 		</div>
