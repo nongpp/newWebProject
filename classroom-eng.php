@@ -58,7 +58,8 @@
 			<div id="container-inside">
 				<div id="text">
 					<h3>Classroom</h3>
-					<p>Thammasat University Pattaya Center have 2 program include Software Engineering and Automotive Engineering we have Macbook for Software Engineer student</p>
+					<p>Thammasat University Pattaya Center have 2 program include Software Engineering and Automotive Engineering we have Macbook for Software Engineer student</br>Divided into two layers
+</br>The ground floor will be a laboratory for automotive operations.</br>The top layer is the computer hardware for the software operation.</p>
 					<div>
 						<img src="img/classroom2.jpg" width="700px" height="400px">
 					</div>

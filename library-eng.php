@@ -3,7 +3,7 @@
 	<head>
 		<title>History</title>
 		<meta charset="utf-8">
-		<?php echo '<link rel="stylesheet" type="text/css" href="library-eng1.css">'; ?>
+		<?php echo '<link rel="stylesheet" type="text/css" href="library-eng.css">'; ?>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
@@ -58,10 +58,14 @@
 			<div id="container-inside">
 				<div id="text">
 					<h3>Library</h3>
-					<p>Thammasat University Pattaya Center we have many book in library</p>
+					<p>Thammasat University Pattaya Center has more than 1000 books to choose from. Anyone who comes here can access the service free of charge. There is no right to borrow books outside the library.</p>
 					<div>
 						<img src="img/library2.jpg" width="700px" height="400px">
 					</div>
+					<h3>Library rules</h3>
+					<p>1. Do not bring food and drink.</br>
+					2. Please stop using noise to disturb others.</br>
+					3. The person who will borrow the book must have a student card. </br></p>
 				</div>
 				<div id="menubar">
 					<a href="dorm-eng.php">

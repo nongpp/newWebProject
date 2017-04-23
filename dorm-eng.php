@@ -58,7 +58,10 @@
 			<div id="container-inside">
 				<div id="text">
 					<h3>Dormitory</h3>
-					<p>Dormitory have 2 dorms white include felmale's dorm and male's dorm.</p>
+					<p>
+Student dormitories have two dormitories, two dormitories, the male chamber and the female chamber.
+The tower has 24 rooms. Each student room must be two people.
+The cost of one room is 15000 baht / term. The electricity bill will be sent to the bill every month.</p>
 					<div>
 						<img src="img/dormitory2.jpg" width="700px" height="400px">
 					</div>

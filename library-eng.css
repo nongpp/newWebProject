@@ -162,7 +162,7 @@ img{
 }
 #container{
 	margin-bottom: 40px;
-	height: 1300px;
+	height: 1500px;
 }
 #container-inside{
 	width: 90%;
@@ -171,7 +171,6 @@ img{
 #text{
 	padding-top: 40px;
 	width: 80%;
-	text-align: center;
 	float: left;
 	margin: 0;
 }
