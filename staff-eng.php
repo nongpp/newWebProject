@@ -3,7 +3,7 @@
 	<head>
 		<title>Staff</title>
 		<meta charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="staff-eng.css">
+		<link rel="stylesheet" type="text/css" href="staff-eng1.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
@@ -54,237 +54,169 @@
 		<!--Start Administrator-->
 		<h3>Administrators</h3>
 		<div id="admin">
-			<article class="paragraph">
-				<section class="admin-pic">
-					<img src="img/staff/admin1.jpg" width="100%" height="100%" class="admin-img">
-				</section>
-				<section class="admin-content">
-					<div class="headline">
-						<h4>Assoc. Prof. Dr. Prapat Wangskarn</h4>
-					</div>
-					<div class="text">
-						<p>Dean of Faculty</p>
-					</div>
-					<div class="icon">
-						<p class="text2"><i class = "fa fa-envelope"></i> wprapat@engr.tu.ac.th</p>
-					</div>
-				</section>
-			</article>
-			<article class="paragraph">
-				<section class="admin-pic">
-					<img src="img/staff/admin2.jpg" width="100%" height="100%" class="admin-img">
-				</section>
-				<section class="admin-content">
-					<div class="headline">
-						<h4>Mr. Sirisilp Kongsilp</h4>
-					</div>
-					<div class="text">
-						<p>Assistant Dean for special events</p>
-					</div>
-					<div class="icon">
-						<p class="text2"><i class = "fa fa-envelope"></i> sirisilp@engr.tu.ac.th</p>
-					</div>
-				</section>
-			</article>
-			<article class="paragraph">
-				<section class="admin-pic">
-					<img src="img/staff/admin3.jpg" width="100%" height="100%" class="admin-img">
-				</section>
-				<section class="admin-content">
-					<div class="headline">
-						<h4>Mr. Nattadon Pannucharoenwong</h4>
-					</div>
-					<div class="text">
-						<p>Assistant Dean for Student Affairs Pattaya Center</p>
-					</div>
-					<div class="icon">
-						<p class="text2"><i class = "fa fa-envelope"></i> pnattado@engr.tu.ac.th</p>
-					</div>
-				</section>
-			</article>
-			<article class="paragraph">
-				<section class="admin-pic">
-					<img src="img/staff/admin4.jpg" width="100%" height="100%" class="admin-img">
-				</section>
-				<section class="admin-content">
-					<div class="headline">
-						<h4>Mr. Surasak Phetmanee</h4>
-					</div>
-					<div class="text">
-						<p>Assistant Dean for Student Affairs Pattaya Center</p>
-					</div>
-					<div class="icon">
-						<p class="text2"><i class = "fa fa-envelope"></i> psurasak@engr.tu.ac.th</p>
-					</div>
-				</section>
-			</article>
-			<article class="paragraph">
-				<section class="admin-pic">
-					<img src="img/staff/admin5.jpg" width="100%" height="100%" class="admin-img">
-				</section>
-				<section class="admin-content">
-					<div class="headline">
-						<h4>Miss Thayalan Konkay</h4>
-					</div>
-					<div class="text">
-						<p>The Management Consultant</p>
-					</div>
-				</section>
-			</article>
+			<?php
+					$db = mysqli_connect("localhost","root","","tu_pattaya");
+					$sql = "SELECT *FROM staff";
+					$result = mysqli_query($db, $sql);
+						
+					while($row = mysqli_fetch_array($result)){
+						if($row['section'] == '1'){
+							echo "<article class='paragraph'>";
+								echo "<section class='admin-pic'>";
+									echo "<img src = 'admin/staff/".$row['image']."' width='100%' height='100%' class='admin-img'>";
+								echo "</section>";
+								echo "<section class='admin-content'>";
+									echo "<div class='headline'>";
+										echo "<h4>".$row['neng']."</h4>";
+									echo "</div>";
+									echo "<div class='text'>";
+										echo "<p>".$row['peng']."</p>";
+									echo "</div>";
+								echo "</section>";
+							echo "</article>";
+						}
+					}
+			?>
+			
+		
 		</div>
-		
-		
+		<div class="unit">
 		<h2>General Management and Information</h2>
-		<div class="unit"><h3>Government Administration</h3></div>
+		<h3>Government Administration</h3></div>
 		<div class="manage">
-			<article class="paragraph">
-				<section class="admin-pic">
-					<img src="img/staff/ga1.jpg" width="100%" height="100%" class="admin-img">
-				</section>
-				<section class="admin-content">
-					<div class="headline">
-						<h4>Miss Unchalee Kamnuantong</h4>
-					</div>
-					<div class="text">
-						<p>Administration Officer Operations</p>
-					</div>
-				</section>
-			</article>
-			<article class="paragraph">
-				<section class="admin-pic">
-					<img src="img/staff/ga2.jpg" width="100%" height="100%" class="admin-img">
-				</section>
-				<section class="admin-content">
-					<div class="headline">
-						<h4>Miss Chonlada Khanjunthuek</h4>
-					</div>
-					<div class="text">
-						<p>Administration Officer Operations</p>
-					</div>
-				</section>
-			</article>
-			<article class="paragraph">
-				<section class="admin-pic">
-					<img src="img/staff/ga3.jpg" width="100%" height="100%" class="admin-img">
-				</section>
-				<section class="admin-content">
-					<div class="headline">
-						<h4>Mr. Knawith Klomjorho</h4>
-					</div>
-					<div class="text">
-						<p>chauffeur</p>
-					</div>
-				</section>
-			</article>
+			<?php
+					$db = mysqli_connect("localhost","root","","tu_pattaya");
+					$sql = "SELECT *FROM staff";
+					$result = mysqli_query($db, $sql);
+						
+					while($row = mysqli_fetch_array($result)){
+						if($row['section'] == '2'){
+							echo "<article class='paragraph'>";
+								echo "<section class='admin-pic'>";
+									echo "<img src = 'admin/staff/".$row['image']."' width='100%' height='100%' class='admin-img'>";
+								echo "</section>";
+								echo "<section class='admin-content'>";
+									echo "<div class='headline'>";
+										echo "<h4>".$row['neng']."</h4>";
+									echo "</div>";
+									echo "<div class='text'>";
+										echo "<p>".$row['peng']."</p>";
+									echo "</div>";
+								echo "</section>";
+							echo "</article>";
+						}
+					}
+			?>
 		</div>
 		
 		<div class="unit"><h3>Information Technology Unit</h3></div>
 		<div class="manage">
-			<article class="paragraph">
-				<section class="admin-pic">
-					<img src="img/staff/itu1.jpg" width="100%" height="100%" class="admin-img">
-				</section>
-				<section class="admin-content">
-					<div class="headline">
-						<h4>Mr. Jirawat Niamrungrueng</h4>
-					</div>
-					<div class="text">
-						<p>Officials computer operating system</p>
-					</div>
-				</section>
-			</article>
-			<article class="paragraph">
-				<section class="admin-pic">
-					<img src="img/staff/itu2.jpg" width="100%" height="100%" class="admin-img">
-				</section>
-				<section class="admin-content">
-					<div class="headline">
-						<h4>Mr. Thanawith Chaikampa</h4>
-					</div>
-					<div class="text">
-						<p>Computer Technical Operations</p>
-					</div>
-				</section>
-			</article>
+			<?php
+					$db = mysqli_connect("localhost","root","","tu_pattaya");
+					$sql = "SELECT *FROM staff";
+					$result = mysqli_query($db, $sql);
+						
+					while($row = mysqli_fetch_array($result)){
+						if($row['section'] == '3'){
+							echo "<article class='paragraph'>";
+								echo "<section class='admin-pic'>";
+									echo "<img src = 'admin/staff/".$row['image']."' width='100%' height='100%' class='admin-img'>";
+								echo "</section>";
+								echo "<section class='admin-content'>";
+									echo "<div class='headline'>";
+										echo "<h4>".$row['neng']."</h4>";
+									echo "</div>";
+									echo "<div class='text'>";
+										echo "<p>".$row['peng']."</p>";
+									echo "</div>";
+								echo "</section>";
+							echo "</article>";
+						}
+					}
+			?>
 		</div>
 		
 		
 		<h2>Educational Services and Student Affairs</h2>
 		<div class="unit"><h3>Registration and Academic</h3></div>
 		<div class="manage">
-			<article class="paragraph">
-				<section class="admin-pic">
-					<img src="img/staff/ra1.jpg" width="100%" height="100%" class="admin-img">
-				</section>
-				<section class="admin-content">
-					<div class="headline">
-						<h4>Miss Kannika Saetang</h4>
-					</div>
-					<div class="text">
-						<p>Academic Operations</p>
-					</div>
-				</section>
-			</article>
+			<?php
+					$db = mysqli_connect("localhost","root","","tu_pattaya");
+					$sql = "SELECT *FROM staff";
+					$result = mysqli_query($db, $sql);
+						
+					while($row = mysqli_fetch_array($result)){
+						if($row['section'] == '4'){
+							echo "<article class='paragraph'>";
+								echo "<section class='admin-pic'>";
+									echo "<img src = 'admin/staff/".$row['image']."' width='100%' height='100%' class='admin-img'>";
+								echo "</section>";
+								echo "<section class='admin-content'>";
+									echo "<div class='headline'>";
+										echo "<h4>".$row['neng']."</h4>";
+									echo "</div>";
+									echo "<div class='text'>";
+										echo "<p>".$row['peng']."</p>";
+									echo "</div>";
+								echo "</section>";
+							echo "</article>";
+						}
+					}
+			?>
 		</div>
 		
 		<div class="unit"><h3>Student Affairs</h3></div>
 		<div class="manage">
-			<article class="paragraph">
-				<section class="admin-pic">
-					<img src="img/staff/sa1.jpg" width="100%" height="100%" class="admin-img">
-				</section>
-				<section class="admin-content">
-					<div class="headline">
-						<h4>Miss Jiraporn Pukjanta</h4>
-					</div>
-					<div class="text">
-						<p>Academic Operations</p>
-					</div>
-				</section>
-			</article>
+			<?php
+					$db = mysqli_connect("localhost","root","","tu_pattaya");
+					$sql = "SELECT *FROM staff";
+					$result = mysqli_query($db, $sql);
+						
+					while($row = mysqli_fetch_array($result)){
+						if($row['section'] == '5'){
+							echo "<article class='paragraph'>";
+								echo "<section class='admin-pic'>";
+									echo "<img src = 'admin/staff/".$row['image']."' width='100%' height='100%' class='admin-img'>";
+								echo "</section>";
+								echo "<section class='admin-content'>";
+									echo "<div class='headline'>";
+										echo "<h4>".$row['neng']."</h4>";
+									echo "</div>";
+									echo "<div class='text'>";
+										echo "<p>".$row['peng']."</p>";
+									echo "</div>";
+								echo "</section>";
+							echo "</article>";
+						}
+					}
+			?>
 		</div>
 		
 		<div class="unit"><h3>Unit and laboratory maintenance</h3></div>
 		<div class="manage">
-			<article class="paragraph">
-				<section class="admin-pic">
-					<img src="img/staff/ulm1.jpg" width="100%" height="100%" class="admin-img">
-				</section>
-				<section class="admin-content">
-					<div class="headline">
-						<h4>Mr. Saharat Bunsuea</h4>
-					</div>
-					<div class="text">
-						<p>Operating engineers</p>
-					</div>
-				</section>
-			</article>
-			<article class="paragraph">
-				<section class="admin-pic">
-					<img src="img/staff/ulm2.jpg" width="100%" height="100%" class="admin-img">
-				</section>
-				<section class="admin-content">
-					<div class="headline">
-						<h4>Mr. Jakapong Supnakorn</h4>
-					</div>
-					<div class="text">
-						<p>Operating engineers</p>
-					</div>
-				</section>
-			</article>
-			<article class="paragraph">
-				<section class="admin-pic">
-					<img src="img/staff/ulm3.jpg" width="100%" height="100%" class="admin-img">
-				</section>
-				<section class="admin-content">
-					<div class="headline">
-						<h4>Mr. Panuwath Buntathaw</h4>
-					</div>
-					<div class="text">
-						<p>Operating engineers</p>
-					</div>
-				</section>
-			</article>
+			<?php
+					$db = mysqli_connect("localhost","root","","tu_pattaya");
+					$sql = "SELECT *FROM staff";
+					$result = mysqli_query($db, $sql);
+						
+					while($row = mysqli_fetch_array($result)){
+						if($row['section'] == '6'){
+							echo "<article class='paragraph'>";
+								echo "<section class='admin-pic'>";
+									echo "<img src = 'admin/staff/".$row['image']."' width='100%' height='100%' class='admin-img'>";
+								echo "</section>";
+								echo "<section class='admin-content'>";
+									echo "<div class='headline'>";
+										echo "<h4>".$row['neng']."</h4>";
+									echo "</div>";
+									echo "<div class='text'>";
+										echo "<p>".$row['peng']."</p>";
+									echo "</div>";
+								echo "</section>";
+							echo "</article>";
+						}
+					}
+			?>
 		</div>
 		<!--End Administrator-->
 		<br><br>
