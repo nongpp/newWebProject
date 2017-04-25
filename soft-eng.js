@@ -1,19 +1,22 @@
 document.getElementById("about-click").addEventListener("click", aboutShow);
 document.getElementById("course-click").addEventListener("click", courseShow);
-document.getElementById("recruitment-click").addEventListener("click", recruitmentShow);
+document.getElementById("plan-click").addEventListener("click", planShow);
 
 function courseShow(){
-	document.getElementById("head-detail").style.display = 'none';
+	document.getElementById("general").style.display = 'none';
 	document.getElementById("course").style.display = 'block';
-	document.getElementById("recruitment").style.display = 'none';
+	document.getElementById("plan").style.display = 'none';
+	document.getElementById("bodyData").style.height = '400px';
 }
 function aboutShow(){
-	document.getElementById("head-detail").style.display = 'block';
+	document.getElementById("general").style.display = 'block';
 	document.getElementById("course").style.display = 'none';
-	document.getElementById("recruitment").style.display = 'none';
+	document.getElementById("plan").style.display = 'none';
+	document.getElementById("bodyData").style.height = '1000px';
 }
-function recruitmentShow(){
-	document.getElementById("recruitment").style.display = 'block';
+function planShow(){
+	document.getElementById("plan").style.display = 'block';
 	document.getElementById("course").style.display = 'none';
-	document.getElementById("head-detail").style.display = 'none';
+	document.getElementById("general").style.display = 'none';
+	document.getElementById("bodyData").style.height = '3200px';
 }
