@@ -4,7 +4,7 @@
 	border : 0;
 }
 body{
-	background : #ecf0f1;
+	background : white;
 	color : #67727A;
 	font-family: 'Montserrat', sans-serif;
 	margin : 0;
@@ -23,12 +23,12 @@ h2{
 	text-align: center;
 }
 h3{
-	font-family: 'Montserrat', sans-serif;
-	font-size : 175%;
+	font-size : 170%;
 	line-height : 150%;
 	padding : 2% 0 0 0;
+	color : black;
 	text-align: center;
-	color : #222222;
+	font-family: 'Cabin Sketch', cursive;
 }
 h4{
 	font-size: 150%;
@@ -37,9 +37,9 @@ h4{
 }
 p{
 	font-family: 'Montserrat', sans-serif;
-	color : #67727A;
+	color : black;
 	font-size : 120%;
-	line-height : 150%;
+	line-height : 180%;
 	padding : 3%;
 }
 a{
@@ -53,7 +53,7 @@ a{
 .stick-top { top: 0; }
 .stick-bottom { bottom: 0; }
 header{
-	background-color : #111111;
+	background-color : #ecf0f1;
 	border-top: 2px solid #ffcc00;
 	width : 100%;
 	height : 66px;
@@ -61,6 +61,11 @@ header{
 #header-inner{
 	max-width : 1200px;
 	margin : 0 auto;
+}
+#wrapper{
+	width: 100%;
+	height: 70px;
+	background: #ecf0f1;
 }
 #logo{
 	margin : 5px 20px 0 0;
@@ -88,26 +93,27 @@ ul{
 }
 nav ul li{
 	font-family: 'Montserrat', sans-serif;
-	font-size : 100%;
+	font-size : 90%;
 	display : inline-block;
 	float : left;
 	padding : 0 30px 0 30px;
 }
 nav ul li a{
-	color : #F5F5F5;
-	padding: 0;
-	padding: 20px 0 20px 0;
+	color : black;
+	padding: 10px;
 	text-decoration : none;
 }
 nav ul li a:hover{
-	padding-bottom: 20px;
-	border-bottom: 3px solid #ffcc00;
-	color: #ffcc00;
+	color: white;
+	background: rgba(231, 76, 60, 0.6);
+	padding: 10px;
+	border-radius: 5px;
 }
 .current{
-	color: #ffcc00;
-	padding-bottom: 20px;
-	border-bottom: 3px solid #ffcc00;
+	color: white;
+	background: rgba(231, 76, 60, 0.6);
+	padding: 10px;
+	border-radius: 5px;
 }
 li a, .dropbtn {
     color: white;
@@ -119,10 +125,11 @@ li.dropdown {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: rgba(200, 200, 200, 0.7);
     min-width: 160px;
     z-index: 1;
-	margin-top: 20px;
+	margin-top: 10px;
+	border-radius: 5px;
 }
 .dropdown-content a {
     color: black;
@@ -134,7 +141,7 @@ li.dropdown {
 }
 .dropdown-content a:hover {
 	padding: 12px 16px;
-	background-color: #222222;
+	background-color: rgba(231, 76, 60, 0.6);
 	border: none;
 	color: white;
 }
@@ -142,31 +149,27 @@ li.dropdown {
     display: block;
 }
 .flag{
-	padding: 0;
-	margin: 0;
+	margin-left: 20px;
 }
 .flag:hover{
-	padding: 0;
-	margin: 0;
-	background: white;
+	filter: brightness(350%);
 }
 /*--- End Navigation ---*/
 #container{
-	width: 95%;
+	width: 90%;
 	margin: 0 auto;
-	margin-top: 50px;
-}
-ol{
-	padding: 30px 0 0 50px;
+	margin-bottom: 90px;
 }
 ol li{
-	font-size: 120%;
-	line-height: 200%;
+	font-size: 90%;
+	color: black;
+	font-family: 'Montserrat', sans-serif;
+	line-height: 180%;
 }
 footer{
-	background-color : #111111;
+	background-color : #ecf0f1;
 	width : 100%;
-	color: white;
+	color: black;
 }
 .social{
 	list-style-type : none;
@@ -176,11 +179,11 @@ footer{
 	display : inline;
 }
 .social i{
-	font-size : 350%;
+	font-size : 200%;
 	margin : 1%;
 	padding : 5% 0 5% 3%;
-	color : white;
+	color : black;
 }
 .social i:hover{
-	color : #FFF59D;
+	color : #e74c3c;
 }
