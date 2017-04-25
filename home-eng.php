@@ -38,12 +38,12 @@
 							</li>
 							<li class="dropdown"><a href = "program-eng.php" class="droptn">Program</a>
 								<div class="dropdown-content">
-								  <a href="http://se.engr.tu.ac.th/course.php" target="_blank">Software Engineering</a>
-								  <a href="http://www.tep.engr.tu.ac.th/page_bx.php?cid=33&cname=AUTO-TU&cno=24&cno2=&show=" target="_blank">Automotive Engineering</a>
+								  <a href="soft-eng.php">Software Engineering</a>
+								  <a href="auto-eng.php">Automotive Engineering</a>
 								</div>
 							</li>
 							<li><a href = "life-eng.php">Student's Life</a></li>
-							<a href=""><img src="img/thai.png" alt="thai" width="40px" height="20px" class="flag"></a>
+							<a href="home-thai.php"><img src="img/thai.png" alt="thai" width="40px" height="20px" class="flag"></a>
 							
 						</ul>
 					</nav>
@@ -67,7 +67,7 @@
 				while(($row = mysqli_fetch_array($result)) && ($news <= 3)){
 					echo "<div id='news-each'>";
 						echo "<div id='img'>";
-							echo "<img src = 'admin/news/".$row['image']."' width='350px'>";
+							echo "<img src = 'admin/news/".$row['image']."' width='350px' height='220px'>";
 						echo "</div>";
 						echo "<div id='paragraph'>";
 							echo "<div id='inner-paragraph'>";

@@ -25,10 +25,10 @@
 			<div id="menubar">
 				<a href="admin_page.php"><div class="menubar-inner current"><i class="fa fa-bar-chart" style="font-size:24px"></i>View table</div></a>
 				<a href="viewactivity.php"><div class="menubar-inner"><i class="fa fa-bar-chart" style="font-size:24px"></i>View activity</div></a>
-				<a href="life.php"><div class="menubar-inner"><i class="fa fa-bar-chart" style="font-size:24px"></i>View life</div></a>
+				
 				<a href="addnews.php"><div class="menubar-inner"><i class="fa fa-plus-square" style="font-size:24px"></i>Add news</div></a>
 				<a href="addactivity.php"><div class="menubar-inner"><i class="fa fa-plus-square" style="font-size:24px"></i>Add activity</div></a>
-				<a href="addlife.php"><div class="menubar-inner"><i class="fa fa-plus-square" style="font-size:24px"></i>Add life</div>
+				
 				<a href="logout.php"><div class="menubar-inner"><i class="fa fa-sign-out" style="font-size:24px"></i>Log out</div></a>
 			</div>
 			<div id="content">

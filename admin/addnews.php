@@ -47,10 +47,12 @@
 			<div id="menubar">
 				<a href="admin_page.php"><div class="menubar-inner"><i class="fa fa-bar-chart" style="font-size:24px"></i>View news</div></a>
 				<a href="activity.php"><div class="menubar-inner"><i class="fa fa-bar-chart" style="font-size:24px"></i>View activity</div></a>
-				<a href="life.php"><div class="menubar-inner"><i class="fa fa-bar-chart" style="font-size:24px"></i>View life</div></a>
+				<a href="viewstaff.php"><div class="menubar-inner"><i class="fa fa-child" style="font-size:24px"></i></i>View Staff</div></a>
+				
 				<a href="addnews.php"><div class="menubar-inner current"><i class="fa fa-plus-square" style="font-size:24px"></i>Add news</div></a>
 				<a href="addactivity.php"><div class="menubar-inner"><i class="fa fa-plus-square" style="font-size:24px"></i>Add activity</div></a>
-				<a href="addlife.php"><div class="menubar-inner"><i class="fa fa-plus-square" style="font-size:24px"></i>Add life</div></a>
+				<a href="addstaff.php"><div class="menubar-inner"><i class="fa fa-plus-square" style="font-size:24px"></i>Add Staff</div></a>
+				
 				<a href="logout.php" onclick="return confirm('Are you sure to logout?');"><div class="menubar-inner"><i class="fa fa-sign-out" style="font-size:24px"></i>Log out</div></a>
 			</div>
 			<div id="english">
@@ -63,11 +65,11 @@
 						<form method="post" action="addnews.php" enctype="multipart/form-data">
 							<input type="hidden" name="size" value="1000000">
 							<div>
-								<input type="file" name="image">
+								<input type="file" name="image" required>
 							</div>
 							<div>
 								<h3>header</h3>
-								<input type="text" name="topic">
+								<input type="text" name="topic" required autofocus>
 							</div>
 							<div>
 								<h3>content</h3>
