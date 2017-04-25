@@ -44,7 +44,9 @@
 									echo "<div id='paragraph'>";
 										echo "<div id='inner-paragraph'>";
 											echo "<p>".$row['neng']."</p>";
-											echo "<p>".$row['section']."</p>";
+											echo "<p>".$row['peng']."</p>";
+											echo "<a href='edit_staff.php?id=$row[0]'>แก้ไข</a><br>";
+											echo "<a href='delete_staff.php?id=$row[0]'>ลบ</a>";
 											echo "<br><br>";
 										echo "</div>";
 									echo "</div>";
@@ -67,7 +69,9 @@
 									echo "<div id='paragraph'>";
 										echo "<div id='inner-paragraph'>";
 											echo "<p>".$row['neng']."</p>";
-											echo "<p>".$row['section']."</p>";
+											echo "<p>".$row['peng']."</p>";
+											echo "<a href='edit_staff.php?id=$row[0]'>แก้ไข</a><br>";
+											echo "<a href='delete_staff.php?id=$row[0]'>ลบ</a>";
 											echo "<br><br>";
 										echo "</div>";
 									echo "</div>";
@@ -90,7 +94,9 @@
 									echo "<div id='paragraph'>";
 										echo "<div id='inner-paragraph'>";
 											echo "<p>".$row['neng']."</p>";
-											echo "<p>".$row['section']."</p>";
+											echo "<p>".$row['peng']."</p>";
+											echo "<a href='edit_staff.php?id=$row[0]'>แก้ไข</a><br>";
+											echo "<a href='delete_staff.php?id=$row[0]'>ลบ</a>";
 											echo "<br><br>";
 										echo "</div>";
 									echo "</div>";
@@ -113,7 +119,9 @@
 									echo "<div id='paragraph'>";
 										echo "<div id='inner-paragraph'>";
 											echo "<p>".$row['neng']."</p>";
-											echo "<p>".$row['section']."</p>";
+											echo "<p>".$row['peng']."</p>";
+											echo "<a href='edit_staff.php?id=$row[0]'>แก้ไข</a><br>";
+											echo "<a href='delete_staff.php?id=$row[0]'>ลบ</a>";
 											echo "<br><br>";
 										echo "</div>";
 									echo "</div>";
@@ -136,7 +144,9 @@
 									echo "<div id='paragraph'>";
 										echo "<div id='inner-paragraph'>";
 											echo "<p>".$row['neng']."</p>";
-											echo "<p>".$row['section']."</p>";
+											echo "<p>".$row['peng']."</p>";
+											echo "<a href='edit_staff.php?id=$row[0]'>แก้ไข</a><br>";
+											echo "<a href='delete_staff.php?id=$row[0]'>ลบ</a>";
 											echo "<br><br>";
 										echo "</div>";
 									echo "</div>";
@@ -159,8 +169,10 @@
 									echo "<div id='paragraph'>";
 										echo "<div id='inner-paragraph'>";
 											echo "<p>".$row['neng']."</p>";
-											echo "<p>".$row['section']."</p>";
-											echo "<br><br>";
+											echo "<p>".$row['peng']."</p>";
+											echo "<a href='edit_staff.php?id=$row[0]'>แก้ไข</a><br>";
+											echo "<a href='delete_staff.php?id=$row[0]'>ลบ</a>";
+											echo "<br>";
 										echo "</div>";
 									echo "</div>";
 								echo "</div>";
