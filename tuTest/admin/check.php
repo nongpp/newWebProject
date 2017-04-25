@@ -9,9 +9,10 @@
 	$result = mysqli_query($con,$sql);
 	$row = mysqli_fetch_row($result);
 	
+
 	if($username == $row[1] && $md5password == $row[2]){
 		$_SESSION['username'] = $_POST['username'];
-      		$_SESSION['password'] = $_POST['password'];
+    $_SESSION['password'] = $_POST['password'];
 		header("location:admin_page.php");
 	}
 	else{
