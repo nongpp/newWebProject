@@ -6,13 +6,13 @@ function courseShow(){
 	document.getElementById("general").style.display = 'none';
 	document.getElementById("course").style.display = 'block';
 	document.getElementById("plan").style.display = 'none';
-	document.getElementById("bodyData").style.height = '430px';
+	document.getElementById("bodyData").style.height = '500px';
 }
 function aboutShow(){
 	document.getElementById("general").style.display = 'block';
 	document.getElementById("course").style.display = 'none';
 	document.getElementById("plan").style.display = 'none';
-	document.getElementById("bodyData").style.height = '1100px';
+	document.getElementById("bodyData").style.height = '1600px';
 }
 function planShow(){
 	document.getElementById("plan").style.display = 'block';
